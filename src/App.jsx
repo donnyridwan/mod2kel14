@@ -1,33 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Card from './card'
 import './App.css'
+import { styled } from 'styled-components'
+import TextInput from './Textinput';
 
+const CardContainer = styled.div`
+  display: flex;
+  align-item: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 10px;
+  padding: 10px;
+`;
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>Klik buat pindah ke ig</h1>
+      <CardContainer>
+        <Card Nama="Donny Ridwan S" 
+              Nim="21120120130083" 
+              Email="donnyr65@gmail.com" 
+              link="https://www.instagram.com/donny_ridwan/"
+        />
+        <Card Nama="Aggy Achya Fadhlika " 
+              Nim="21120120140119" 
+              Email="aggyachya@gmail.com" 
+              link="https://www.instagram.com/aggyachya/"
+        />
+        <Card Nama="Lintang Fadhillah Haikal " 
+              Nim="21120120140121" 
+              Email="lintangfadhillahhaikal7588@gmail.com" 
+              link="https://www.instagram.com/teng_fdh/"
+        />
+        <Card Nama="Fitriawan Arya Nugraha" 
+              Nim="21120120140153" 
+              Email="nugrahaaryaa17@gmail.com" 
+              link="https://www.instagram.com/aryanug_17/"
+        />
+      </CardContainer>
+      <TextInput/>
     </>
   )
 }
